@@ -10,7 +10,6 @@ describe('app:notfound', function() {
     it('should return an json response of route was not found', async function () {
         const response = await request(server).get('/not_found')
         const jsonResponse = JSON.parse(response.text)
-        console.log("jsonResponse",jsonResponse);
         expect(jsonResponse.message).toEqual('Route was not found')
     })
 })
