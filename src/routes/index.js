@@ -8,4 +8,8 @@ router.get('/', function(req, res, next) {
   res.json({ message: 'The server is running' });
 })
 
+router.get('healthcheck/', function(req, res) {
+  res.status(200).json({ 'message': 'teste'});
+});
+
 module.exports = router
